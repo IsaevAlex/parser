@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49bfbdfe-1240-41be-a942-06b759ed93a6" name="Default Changelist" comment="" />
+    <list default="true" id="49bfbdfe-1240-41be-a942-06b759ed93a6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,7 +16,11 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XleKdx3KsimUSAeFE4f7E2HyqI" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -20,6 +28,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -52,7 +61,7 @@
       <updated>1581625046232</updated>
       <workItem from="1581625048590" duration="9056000" />
       <workItem from="1581748667685" duration="4302000" />
-      <workItem from="1582739967041" duration="6048000" />
+      <workItem from="1582739967041" duration="6813000" />
     </task>
     <servers />
   </component>
@@ -60,6 +69,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="112" y="54" width="1105" height="794" key="CommitChangelistDialog2" timestamp="1582760774634">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="112" y="54" width="1105" height="794" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1582760774634" />
     <state x="399" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1581750368295">
       <screen x="0" y="22" width="1440" height="878" />
     </state>
@@ -68,6 +81,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="402" y="96" width="635" height="708" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1582707601602" />
+    <state x="458" y="249" key="git4idea.merge.GitPullDialog" timestamp="1582760584809">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="249" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1582760584809" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1582373664665">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

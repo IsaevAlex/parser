@@ -1,24 +1,12 @@
-# README
+# Documentation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ruby on Rails parser application
 
-Things you may want to cover:
+#How to use
 
-* Ruby version
+1. git clone https://github.com/IsaevAlex/parser.git
+2. bundle install
+3. rake db:migrate
+4. rake db:seed 
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

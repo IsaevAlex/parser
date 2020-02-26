@@ -1,0 +1,37 @@
+<div class="container">
+  <h1 class="title">
+     <%= $getState.value %>
+  </h1>
+  <div class="row">
+
+    <%= render "partials/modal" %>
+
+    <div class="col s8">
+      <% @news.each do |entry| %>
+
+        <div class="card horizontal ">
+          <div class="card-image">
+            <%= image_tag(entry.imgsrc) %>
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p class="text"><%= entry.title %></p>
+            </div>
+            <div class="card-action card-action-flex">
+              <div class="card__link">
+                <%= link_to "Открыть", entry %>
+              </div>
+              <div class="card__date">
+                <%= entry.date %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      <% end %>
+    </div>
+    <div class="col s4 right-align">
+      <button data-target="modal1" class="btn blue darken-1 modal-trigger">Другой регион</button>
+    </div>
+  </div>
+</div>

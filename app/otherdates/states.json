@@ -1,0 +1,12 @@
+{
+  "states":[
+      {
+        "name": "Адыгея",
+        "value": "Adygeja"
+      },
+      {
+        "name": "Башкирия",
+        "value": "Bashkirija"
+      }
+  ]
+}

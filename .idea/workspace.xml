@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="49bfbdfe-1240-41be-a942-06b759ed93a6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1XleKdx3KsimUSAeFE4f7E2HyqI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49bfbdfe-1240-41be-a942-06b759ed93a6" name="Default Changelist" comment="" />
+      <created>1581625046232</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581625046232</updated>
+      <workItem from="1581625048590" duration="9056000" />
+      <workItem from="1581748667685" duration="4302000" />
+      <workItem from="1582739967041" duration="6048000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="399" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1581750368295">
+      <screen x="0" y="22" width="1440" height="878" />
+    </state>
+    <state x="399" y="293" key="com.intellij.ide.util.TipDialog/0.22.1440.878@0.22.1440.878" timestamp="1581750368295" />
+    <state x="402" y="96" width="635" height="708" key="find.popup" timestamp="1582707601602">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="402" y="96" width="635" height="708" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1582707601602" />
+    <state width="600" height="424" key="javadoc.popup" timestamp="1582373664665">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="600" height="424" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1582373664665" />
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup" timestamp="1582759838192">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582759838192" />
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup/0.22.1440.878@0.22.1440.878" timestamp="1582708142028" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/views/news/football.html.erb</url>
+          <line>4</line>
+          <properties myBlockOrdinal="-1">
+            <option name="block-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

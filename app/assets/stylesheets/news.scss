@@ -1,0 +1,19 @@
+// Place all the styles related to the News controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.new{
+  &__date{
+    &-margin{
+      margin: 1em 0;
+    }
+  }
+  &__textContainer{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  &__text{
+    max-width: 800px;
+  }
+}

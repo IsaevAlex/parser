@@ -1,0 +1,14 @@
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <h4>Поиск новостей</h4>
+    <p>Будьте в курсе новостей</p>
+    <div class="input-field col s12">
+      <%= form_tag(search_path, method: :get) do %>
+        <%= text_field_tag(:search, params[:search], class: "validate") %>
+        <div class="model-content__btn right-align">
+          <%= submit_tag("Поиск", class:"btn blue darken-1" ) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

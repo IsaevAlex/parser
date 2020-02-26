@@ -1,0 +1,23 @@
+.currencyCard{
+  &__item{
+    display: flex;
+    flex-direction: column;
+
+    &-mr{
+      margin-right: 20px;
+
+      &:last-child{
+        margin-right: 0;
+      }
+    }
+  }
+  &__content{
+    display: flex;
+  }
+
+
+
+  &__value{
+    font-size: 12px;
+  }
+}

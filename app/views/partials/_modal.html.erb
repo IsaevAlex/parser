@@ -1,0 +1,15 @@
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4>Выбрать регион</h4>
+    <p>Будьте в курсе новостей вашего региона</p>
+    <div class="input-field col s12">
+      <%= form_tag({ controller: 'news', action: 'set_state' }, method: 'get') do %>
+        <%= select_tag :set_state, options_from_collection_for_select(State.all, :name, :value) %>
+        <div class="model-content__btn right-align">
+          <%= submit_tag "Выбрать", name: nil, class: 'btn blue darken-1' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

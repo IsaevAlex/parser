@@ -1,0 +1,19 @@
+.card{
+  &-action-flex{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__date{
+
+  }
+}
+
+.card-contentSidebarLink{
+  font-family: "Roboto";
+  font-size: 1.2rem;
+  color: #000;
+  &:hover{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

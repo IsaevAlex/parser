@@ -1,0 +1,20 @@
+<nav class="blue darken-1">
+    <div class="nav-wrapper nav-wrapper-margin">
+      <%= link_to 'NEWS', root_path, class:"brand-logo navTitle" %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <% if $getState.nil? %>
+              <li><a class="modal-trigger" id="modal1" href="#modal1">Новости региона</a></li>
+            <% else %>
+              <li><%= link_to 'Новости региона', state_path %></li>
+            <% end %>
+            <li><%= link_to 'Лента новостей', root_path %></li>
+            <li><%= link_to 'Экономика', economics_path %></li>
+            <li><%= link_to 'Политика', politics_path %></li>
+            <li><%= link_to 'Культура', culture_path %></li>
+            <li><%= link_to 'Спорт', sport_path %></li>
+            <li><%= link_to 'Наука и техника', science_path %></li>
+            <li><%= link_to 'Общество', society_path %></li>
+            <li><a href="collapsible.html">Здоровье</a></li>
+       </ul>
+    </div>
+</nav>

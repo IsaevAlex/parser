@@ -1,28 +1,22 @@
 <div class="container">
-  <h1 class="title">Спорт</h1>
+  <div class="row d-flex align-items-center mt-3">
+    <div class="col s8">
+      <span class="title">Спорт</span>
+    </div>
+    <div class="col s4">
+      <div class="input-field col s12">
+        <%= form_tag(sport_path, method: :get) do %>
+          <%= text_field_tag(:search, params[:search], class: "validate", placeholder: 'Поиск') %>
+        <% end %>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col s8">
-      <% @news.each do |entry| %>
-
-        <div class="card horizontal">
-          <div class="card-image">
-            <%#= image_tag(entry.imgsrc) %>
-          </div>
-          <div class="card-stacked">
-            <div class="card-content">
-              <p class=" text"><%= entry.title %></p>
-            </div>
-            <div class="card-action card-action-flex">
-              <div class="card__link">
-                <%= link_to "Открыть", entry %>
-              </div>
-              <div class="card__date">
-                <%= entry.date %>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      % if @news.present? %>
+        <%= render @news %>
+      <% else %>
+        <h3 class="no-results"><%= @text %></h3>
       <% end %>
     </div>
     <div class="col s4">
@@ -36,6 +30,13 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <% if @news.present? %>
+        <%= will_paginate @news, :previous_label => 'Предыдущий', :next_label => 'Следующий' %>
+      <% end %>
     </div>
   </div>
 </div>

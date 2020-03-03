@@ -1,0 +1,32 @@
+<footer class="page-footer blue darken-1">
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">Новости</h5>
+        <p class="grey-text text-lighten-4">Свежие новости политики, общества, спорта, культуры, новости дня о происшествиях.</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <h5 class="white-text">Категории</h5>
+        <ul>
+          <% if $getState.nil? %>
+            <li><a class="modal-trigger" id="modal1" href="#modal1">Новости региона</a></li>
+          <% else %>
+            <li><%= link_to 'Новости региона', state_path %></li>
+          <% end %>
+          <li><%= link_to 'Лента новостей', root_path , class: "white-text" %></li>
+          <li><%= link_to 'Экономика', economics_path, class: "white-text" %></li>
+          <li><%= link_to 'Политика', politics_path, class: "white-text" %></li>
+          <li><%= link_to 'Культура', culture_path, class: "white-text" %></li>
+          <li><%= link_to 'Спорт', sport_path, class: "white-text" %></li>
+          <li><%= link_to 'Наука и техника', science_path, class: "white-text" %></li>
+          <li><%= link_to 'Общество', society_path, class: "white-text" %></li>
+          <li><a href="collapsible.html">Здоровье</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright blue darken-1">
+    <div class="container">
+    </div>
+  </div>
+</footer>

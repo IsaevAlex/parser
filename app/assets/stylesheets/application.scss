@@ -20,6 +20,27 @@ body{
   background-color: #edeef0;
 }
 
+.no-results{
+  height: 100vh;
+}
+
+.pagination{
+  margin: 2em 0;
+
+  em,span,a{
+    padding: 10px;
+    border: 1px solid #1E88E5;
+    color: #1E88E5;
+    background-color: #fff;
+  }
+
+  em.current{
+    color: #fff;
+    background-color: #1E88E5;
+  }
+
+}
+
 .mt-3{
   margin-top: 3rem;
 }

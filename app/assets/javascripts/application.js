@@ -16,7 +16,19 @@
 //= require_tree .
 //= require materialize
 
-$(document).ready(function(){
-    $('#modal1').modal();
-    $('#modal2').modal();
+// $(document).ready(function(){
+//     $('#modal1').modal();
+//     $('#modal2').modal();
+// });
+
+// $(document).on('ready', function(event) {
+//     $(".dropdown-trigger").dropdown();
+// });
+//
+// $(document).on('ready page:load', function(event) {
+//     $(".dropdown-trigger").dropdown();
+// });
+
+$(document).on('page:partial-load', function(event) {
+    $(".dropdown-trigger").dropdown();
 });

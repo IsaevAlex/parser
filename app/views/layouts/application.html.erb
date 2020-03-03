@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Новости</title>
     <%= csrf_meta_tags %>
 
@@ -10,9 +11,11 @@
   </head>
 
   <body>
-  <%= render "partials/search-modal" %>
+    <%= render "partials/search-modal" %>
     <%= render "partials/modal" %>
     <%= render "partials/header" %>
+<!--    <div class="preloader"><span class="preloader-gif"></span></div>-->
     <%= yield %>
+    <%= render "partials/footer" %>
   </body>
 </html>

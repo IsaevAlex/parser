@@ -1,0 +1,18 @@
+<div class="card horizontal">
+  <div class="card-image">
+    <%= image_tag(new.imgsrc) %>
+  </div>
+  <div class="card-stacked">
+    <div class="card-content">
+      <p class="text"><%= new.title %></p>
+    </div>
+    <div class="card-action card-action-flex">
+      <div class="card__link">
+        <%= link_to "Открыть", new %>
+      </div>
+      <div class="card__date ">
+        <%= new.date %>
+      </div>
+    </div>
+  </div>
+</div>

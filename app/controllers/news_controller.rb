@@ -13,15 +13,17 @@ class NewsController < ApplicationController
     get_weather
     getLentaFromRia("https://ria.ru/lenta/")
     @search = params[:search]
-    if @search.present?
-      @news = New.paginate(:page => params[:page], :per_page => 10).where("category = 'Лента'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc)
+    @from_date = params[:start_date]
+    @end_date = params[:end_date]
+    if @search.present? || @from_date.present?
+      @news = New.paginate(:page => params[:page], :per_page => 10).where("category = 'Лента'").where("title LIKE ?", "%#{@search}%").order(date: :asc)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.paginate(:page => params[:page], :per_page => 10).where("category = 'Лента'").order(created_at: :desc)
+      @news = New.paginate(:page => params[:page], :per_page => 10).where("category = 'Лента'").order(date: :desc)
     end
   end
 
@@ -53,14 +55,14 @@ class NewsController < ApplicationController
     getNewsFromRia("https://ria.ru/#{$getState.name}/")
     @search = params[:search]
     if @search.present?
-      @news = New.where("category = '#{$getState.value}'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = '#{$getState.value}'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = '#{$getState.value}'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = '#{$getState.value}'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
 
   end
@@ -68,14 +70,14 @@ class NewsController < ApplicationController
   def football
     getNewsFromRia("https://ria.ru/football/")
     if @search.present?
-      @news = New.where("category = 'Футбол'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Футбол'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Футбол'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Футбол'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
 
   end
@@ -83,28 +85,28 @@ class NewsController < ApplicationController
   def society
     getNewsFromRia("https://ria.ru/society/")
     if @search.present?
-      @news = New.where("category = 'Общество'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Общество'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Общество'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Общество'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def fight
     getNewsFromRia("https://ria.ru/fights/")
     if @search.present?
-      @news = New.where("category = 'Единоборства'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Единоборства'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Единоборства'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Единоборства'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
 
   end
@@ -112,56 +114,56 @@ class NewsController < ApplicationController
   def hockey
     getNewsFromRia("https://ria.ru/hockey/")
     if @search.present?
-      @news = New.where("category = 'Хоккей'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Хоккей'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Хоккей'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Хоккей'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def basketball
     getNewsFromRia("https://ria.ru/basketball/")
     if @search.present?
-      @news = New.where("category = 'Баскетбол'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Баскетбол'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Баскетбол'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Баскетбол'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def sport
     getSportNewsFromRia("https://rsport.ria.ru/")
     if @search.present?
-      @news = New.where("category = 'Спорт'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Спорт'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Cпорт'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Cпорт'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def economics
     getNewsFromRia("https://ria.ru/economy/")
     if @search.present?
-      @news = New.where("category = 'Экономика'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Экономика'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Экономика'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Экономика'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
   end
 
@@ -169,12 +171,12 @@ class NewsController < ApplicationController
     doc = Nokogiri::HTML(open(url))
     entries = doc.css('.cell-list__item').take(20)
     entries.each do |entry|
-      title = entry.css('.list-item__title').text
+      title = entry.css('.cell-list__item-title').text
       @new = New.where(title: title).first_or_create(
-          date: entry.css('.list-item__date').text,
+          date: entry.css('.elem-info__date').text ,
           title: title,
-          imgsrc: entry.css('.responsive_img').attr('src'),
-          link: entry.css('.list-item__title').attr('href')
+          # imgsrc: entry.css('.responsive_img').attr('src'),
+          link: entry.css('.cell-list__item-link').attr('href')
       )
       @new.category = "Cпорт"
       @new.domain = "https://ria.ru/"
@@ -202,14 +204,14 @@ class NewsController < ApplicationController
   def politics
     getNewsFromRia("https://ria.ru/politics/")
     if @search.present?
-      @news = New.where("category = 'Политика'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Политика'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Политика'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Политика'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
 
   end
@@ -217,28 +219,28 @@ class NewsController < ApplicationController
   def culture
     getAnotherLentaFromRia("https://ria.ru/culture/")
     if @search.present?
-      @news = New.where("category = 'Культура'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Культура'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'Культура'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'Культура'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
   end
 
   def science
     getAnotherLentaFromRia("https://ria.ru/science/")
     if @search.present?
-      @news = New.where("category = 'РИА Наука'").where("title LIKE ?", "%#{@search}%").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'РИА Наука'").where("title LIKE ?", "%#{@search}%").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
       if @news.present?
         @news
       else
         @text = "К сожалению нет результатов поиска"
       end
     else
-      @news = New.where("category = 'РИА Наука'").order(created_at: :asc).paginate(:page => params[:page], :per_page => 10)
+      @news = New.where("category = 'РИА Наука'").order(date: :asc).paginate(:page => params[:page], :per_page => 10)
     end
   end
 

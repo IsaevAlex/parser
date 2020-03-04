@@ -7,7 +7,7 @@
     <%= render "partials/modal" %>
 
     <div class="col s8">
-      % if @news.present? %>
+      <% if @news.present? %>
         <%= render @news %>
       <% else %>
         <h3 class="no-results"><%= @text %></h3>

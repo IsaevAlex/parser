@@ -1,6 +1,8 @@
 <div class="card horizontal">
   <div class="card-image">
-    <%= image_tag(new.imgsrc) %>
+    <% if new.imgsrc.present? %>
+      <%= image_tag(new.imgsrc) %>
+    <% end %>
   </div>
   <div class="card-stacked">
     <div class="card-content">

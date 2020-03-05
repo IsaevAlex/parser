@@ -4,15 +4,8 @@
     <list default="true" id="49bfbdfe-1240-41be-a942-06b759ed93a6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/news_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/news_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/news/_new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/news/_new.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/news/basketball.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/news/basketball.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/news/football.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/news/football.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/news/hockey.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/news/hockey.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/news/science.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/news/science.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/news/society.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/news/society.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/news/sport.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/news/sport.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/news/state.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/news/state.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/searches/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/searches/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20200222153818_drop_states_table.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +76,7 @@
       <updated>1581625046232</updated>
       <workItem from="1581625048590" duration="9056000" />
       <workItem from="1581748667685" duration="4302000" />
-      <workItem from="1582739967041" duration="41591000" />
+      <workItem from="1582739967041" duration="48580000" />
     </task>
     <task id="LOCAL-00001" summary="Edit README.md">
       <created>1582761146099</created>
@@ -99,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583256761191</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавление изменений (2)">
+      <created>1583338937669</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583338937671</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,17 +108,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Edit README.md" />
     <MESSAGE value="Добавление изменений" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавление изменений" />
+    <MESSAGE value="Добавление изменений (2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавление изменений (2)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="112" y="54" width="1105" height="794" key="CommitChangelistDialog2" timestamp="1583256760677">
+    <state x="112" y="54" width="1105" height="794" key="CommitChangelistDialog2" timestamp="1583338937137">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="112" y="54" width="1105" height="794" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583256760677" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1583256766658">
+    <state x="112" y="54" width="1105" height="794" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583338937137" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1583338940059">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583256766658" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1583338940059" />
     <state x="399" y="293" key="com.intellij.ide.util.TipDialog" timestamp="1581750368295">
       <screen x="0" y="22" width="1440" height="878" />
     </state>
@@ -135,10 +136,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1582373664665" />
-    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup" timestamp="1583313531240">
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup" timestamp="1583340917974">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583313531240" />
+    <state x="385" y="196" width="670" height="158" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583340917974" />
     <state x="385" y="196" width="670" height="158" key="search.everywhere.popup/0.22.1440.878@0.22.1440.878" timestamp="1582708142028" />
   </component>
 </project>

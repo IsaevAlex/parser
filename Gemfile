@@ -15,7 +15,7 @@ gem 'database_validations'
 
 gem 'will_paginate'
 # Use Puma as the app server
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 4.3'
 
 gem 'addressable'
 
